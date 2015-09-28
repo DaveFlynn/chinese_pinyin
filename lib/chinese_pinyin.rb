@@ -96,7 +96,7 @@ class Pinyin
             results << splitter
           end
         else
-          if char =~ /[a-zA-Z0-9]/
+          if char != /\p{han}/
             results << char
           elsif results.last != splitter
             results << splitter
